@@ -40,8 +40,11 @@ func is_running():
 	return is_processing()
 
 
-func get_time_elapsed():
-	return time_elapsed
+func get_time_elapsed(squish = false):
+	if squish:
+		return round(time_elapsed)
+	else:
+		return time_elapsed
 
 
 func _on_Tank_exploded():

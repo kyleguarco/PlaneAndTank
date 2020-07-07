@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://sprites/plane.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/plane.png" type="Texture" id=1]
 [ext_resource path="res://spawners/BombSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/Plane.gd" type="Script" id=3]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.00932, 4.98401 )

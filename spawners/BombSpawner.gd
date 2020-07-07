@@ -5,10 +5,11 @@ signal spawned
 const BOMB_SCENE = preload("res://entities/Bomb.tscn")
 
 export(NodePath) var spawn_dest
+export(int) var _spawn_time_max = 3
 
 
 func _ready():
-	$Timer.start(randi() % 5 + 1)
+	$Timer.start(randi() % _spawn_time_max + 1)
 
 
 func _on_Timer_timeout():

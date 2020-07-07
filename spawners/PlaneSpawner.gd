@@ -6,6 +6,7 @@ const PLANE_SCENE = preload("res://entities/Plane.tscn")
 
 export(NodePath) var spawn_dest = get_parent()
 export(Vector2) var direction = Vector2.LEFT
+export(int) var _spawn_time_max = 5
 
 
 func _on_Timer_timeout():
@@ -14,6 +15,6 @@ func _on_Timer_timeout():
 	plane.set_position(get_position())
 	get_node(spawn_dest).add_child(plane)
 	
-	$Timer.set_wait_time(randi() % 10 + 2)
+	$Timer.set_wait_time(randi() % _spawn_time_max + 1)
 	
 	emit_signal("spawned")
